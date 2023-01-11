@@ -13,15 +13,15 @@ provider "aws" {
 }
 
 module "instance_mod" {
-    source = "./instance"
+  source = "./instance"
 
-    ami_id = var.ami_id
-    machine_type = var.machine_type
-    key_name = var.key_name
+  ami_id       = var.ami_id
+  machine_type = var.machine_type
+  key_name     = var.key_name
 }
 
 module "vpc_mod" {
-    source = "./vpc"
+  source = "./vpc"
 
-    vpc_cidr = var.vpc_cidr
+  vpc_cidr = var.vpc_cidr
 }
